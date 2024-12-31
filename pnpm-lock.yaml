@@ -11,6 +11,9 @@ importers:
       '@vueuse/core':
         specifier: ^12.2.0
         version: 12.2.0(typescript@5.6.3)
+      animate.css:
+        specifier: ^4.1.1
+        version: 4.1.1
       axios:
         specifier: ^1.7.9
         version: 1.7.9
@@ -870,6 +873,9 @@ packages:
 
   alien-signals@0.4.10:
     resolution: {integrity: sha512-7S60rz/mMjz0Djq1VI9rd4bGqKNgxTUGE6k7kwrRO6tF95qt1S3ohz1qaQisvUsfbGh7yXnm6DPRrOhOl1ho1A==}
+
+  animate.css@4.1.1:
+    resolution: {integrity: sha512-+mRmCTv6SbCmtYJCN4faJMNFVNN5EuCTTprDTAo7YzIGji2KADmakjVA3+8mVDkZ2Bf09vayB35lSQIex2+QaQ==}
 
   ansi-regex@2.1.1:
     resolution: {integrity: sha512-TIGnTpdo+E3+pCyAluZvtED5p5wCqLdezCyhPZzKPcxvFplEt4i+W7OONCKgeZFT3+y5NZZfOOS/Bdcanm1MYA==}
@@ -3038,6 +3044,8 @@ snapshots:
   acorn@8.14.0: {}
 
   alien-signals@0.4.10: {}
+
+  animate.css@4.1.1: {}
 
   ansi-regex@2.1.1: {}
 

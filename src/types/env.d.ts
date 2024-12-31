@@ -1,4 +1,3 @@
-// src/types/env.d.ts
 interface ImportMetaEnv {
     /**
      * 应用标题
