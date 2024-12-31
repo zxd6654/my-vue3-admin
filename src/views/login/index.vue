@@ -11,7 +11,7 @@
           inactive-icon="Sunny"
           @change="toggleTheme"
         />
-        <!-- <lang-select class="ml-2 cursor-pointer" /> -->
+        <lang-select class="ml-2 cursor-pointer" />
       </div>
     </div>
   </div>
