@@ -27,10 +27,11 @@ const settingsStore = useSettingsStore();
 const isDark = ref(settingsStore.theme === ThemeEnum.DARK);
 
 // 主题切换
-const toggleTheme=()=>{
-  const newTheme = settingsStore.theme === ThemeEnum.DARK ? ThemeEnum.LIGHT : ThemeEnum.DARK;
+const toggleTheme = () => {
+  const newTheme =
+    settingsStore.theme === ThemeEnum.DARK ? ThemeEnum.LIGHT : ThemeEnum.DARK;
   settingsStore.changeTheme(newTheme);
-}
+};
 </script>
 <style lang="scss" scoped>
 .login {
