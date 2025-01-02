@@ -2,23 +2,36 @@
   "compilerOptions": {
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
     "target": "ES2022",
-    "lib": ["ES2023"],
+    "lib": [
+      "ES2023"
+    ],
     "module": "ESNext",
-    "skipLibCheck": true,
-
+    "skipLibCheck": true, //忽略所有的声明文件（ *.d.ts）的类型检查
+    "forceConsistentCasingInFileNames": true, //禁止对同一个文件的不一致的引用
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
     "noEmit": true,
-
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
+    // 模块和兼容性相关配置
+    "allowSyntheticDefaultImports": true, //允许从没有设置默认导出的模块中默认导入
+    "esModuleInterop": true, //允许module.exports=xxx 导出，由import from 导入.因为很多老的js库使用了commonjs的导出方式，并且没有导出default属性
+    "resolveJsonModule": true, //允许导入扩展名为“.json”的模块
+    // 调试和兼容性相关配置
+    "sourceMap": true, //生成目标文件的sourceMap文件
+    "useDefineForClassFields": true,
+    "allowJs": true, //允许编译器编译JS，JSX文件
+ // 类型声明相关配置
+ "types": ["node", "vite/client", "element-plus/global"]
   },
-  "include": ["vite.config.ts"]
+  "include": [
+    "vite.config.ts"
+  ]
 }
