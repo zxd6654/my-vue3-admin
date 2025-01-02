@@ -1,9 +1,5 @@
 import type { App } from "vue";
-import {
-  createRouter,
-  createWebHashHistory,
-  type RouteRecordRaw,
-} from "vue-router";
+import { createRouter, createWebHashHistory, type RouteRecordRaw } from "vue-router";
 
 //静态路由
 export const constantRoutes: RouteRecordRaw[] = [

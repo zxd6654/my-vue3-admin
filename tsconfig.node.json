@@ -2,9 +2,7 @@
   "compilerOptions": {
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
     "target": "ES2022",
-    "lib": [
-      "ES2023"
-    ],
+    "lib": ["ES2023"],
     "module": "ESNext",
     "skipLibCheck": true, //忽略所有的声明文件（ *.d.ts）的类型检查
     "forceConsistentCasingInFileNames": true, //禁止对同一个文件的不一致的引用
@@ -28,10 +26,8 @@
     "sourceMap": true, //生成目标文件的sourceMap文件
     "useDefineForClassFields": true,
     "allowJs": true, //允许编译器编译JS，JSX文件
- // 类型声明相关配置
- "types": ["node", "vite/client", "element-plus/global"]
+    // 类型声明相关配置
+    "types": ["node", "vite/client", "element-plus/global"]
   },
-  "include": [
-    "vite.config.ts"
-  ]
+  "include": ["vite.config.ts"]
 }
