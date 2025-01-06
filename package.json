@@ -9,7 +9,35 @@
     "preview": "vite preview",
     "lint:eslint": "eslint --fix ./src",
     "lint:prettier": "prettier --write \"**/*.{js,cjs,ts,json,tsx,css,less,scss,vue,html,md}\"",
-    "lint:stylelint": "stylelint  \"**/*.{css,scss,vue}\" --fix"
+    "lint:stylelint": "stylelint  \"**/*.{css,scss,vue}\" --fix",
+    "lint:lint-staged": "lint-staged",
+    "prepare": "husky install"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{cjs,json}": [
+      "prettier --write"
+    ],
+    "*.{vue,html}": [
+      "eslint --fix",
+      "prettier --write",
+      "stylelint --fix"
+    ],
+    "*.{scss,css}": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "*.md": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
@@ -23,6 +51,8 @@
     "vue-router": "4"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
     "@eslint/js": "^9.17.0",
     "@iconify-json/ep": "^1.2.2",
     "@types/node": "^22.10.2",
@@ -30,12 +60,16 @@
     "@typescript-eslint/parser": "^8.19.0",
     "@vitejs/plugin-vue": "^5.2.1",
     "@vue/tsconfig": "^0.7.0",
+    "commitizen": "^4.3.1",
+    "cz-git": "^1.11.0",
     "eslint": "^9.17.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-vue": "^9.32.0",
     "fast-glob": "3.2.11",
     "globals": "^15.14.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.3.0",
     "postcss": "^8.4.49",
     "postcss-html": "^1.7.0",
     "postcss-scss": "^4.0.9",
