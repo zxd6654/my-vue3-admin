@@ -3,7 +3,6 @@ import vue from "@vitejs/plugin-vue";
 
 import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
-
 import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 import Icons from "unplugin-icons/vite";
 import IconsResolver from "unplugin-icons/resolver";
@@ -13,6 +12,14 @@ import { createSvgIconsPlugin } from "vite-plugin-svg-icons";
 import UnoCSS from "unocss/vite";
 
 import { resolve } from "path";
+
+import { name, version, engines, dependencies, devDependencies } from "./package.json";
+
+// 平台的名称、版本、运行所需的 node 版本、依赖、构建时间的类型提示
+const __APP_INFO__ = {
+  pkg: { name, version, engines, dependencies, devDependencies },
+  buildTimestamp: Date.now(),
+};
 
 const pathSrc = resolve(__dirname, "src");
 // https://vite.dev/config/
@@ -101,5 +108,9 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
         symbolId: "icon-[dir]-[name]",
       }),
     ],
+    define: {
+      //定义全局常量替换方式。
+      __APP_INFO__: JSON.stringify(__APP_INFO__),
+    },
   };
 });

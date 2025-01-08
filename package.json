@@ -1,7 +1,7 @@
 {
   "name": "my-vue3-admin",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -47,6 +47,7 @@
     "axios": "^1.7.9",
     "element-plus": "^2.9.1",
     "pinia": "^2.3.0",
+    "qs": "^6.13.1",
     "vue": "^3.5.13",
     "vue-i18n": "^11.0.1",
     "vue-router": "4"
@@ -57,6 +58,7 @@
     "@eslint/js": "^9.17.0",
     "@iconify-json/ep": "^1.2.2",
     "@types/node": "^22.10.2",
+    "@types/qs": "^6.9.17",
     "@typescript-eslint/eslint-plugin": "^8.19.0",
     "@typescript-eslint/parser": "^8.19.0",
     "@vitejs/plugin-vue": "^5.2.1",
@@ -92,5 +94,8 @@
     "vite-plugin-svg-icons": "2.0.1",
     "vue-eslint-parser": "^9.4.3",
     "vue-tsc": "^2.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
