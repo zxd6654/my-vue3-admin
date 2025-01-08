@@ -134,17 +134,24 @@
         </div>
       </el-form>
     </div>
+
+    <!-- 登录页底部 -->
+    <div class="login-footer">
+      <el-text size="small">
+        Copyright © 2021 - 2025 youlai.tech All Rights Reserved.
+        <a href="http://beian.miit.gov.cn/" target="_blank">皖ICP备20006496号-2</a>
+      </el-text>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import type { LocationQuery } from "vue-router";
-
-import AuthAPI, { type LoginData } from "@/api/auth";
-import router from "@/router";
-
 import type { FormInstance } from "element-plus";
 
+import AuthAPI, { type LoginData } from "@/api/auth";
+
+import router from "@/router";
 import defaultSettings from "@/settings";
 import { ThemeEnum } from "@/enums/ThemeEnum";
 
@@ -225,6 +232,9 @@ async function handleLoginSubmit() {
         })
         .catch(() => {
           getCaptcha();
+        })
+        .finally(() => {
+          loading.value = true;
         });
     }
   });
@@ -240,7 +250,7 @@ function parseRedirect(): {
   queryParams: Record<string, string>;
 } {
   const query: LocationQuery = route.query;
-  const redirect = (query.redirect as string) ?? "/";
+  const redirect = (query.redirect as string) ?? "/"; //as类型断言，用于将某种类型转换为另一种类型。??逻辑空值运算符
 
   const url = new URL(redirect, window.location.origin);
   const path = url.pathname;
@@ -272,6 +282,10 @@ const setLoginCredentials = (username: string, password: string) => {
   loginData.value.username = username;
   loginData.value.password = password;
 };
+
+onMounted(() => {
+  getCaptcha();
+});
 </script>
 
 <style lang="scss" scoped>

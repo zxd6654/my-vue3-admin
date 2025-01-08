@@ -4,7 +4,6 @@ import { useUserStoreHook } from "@/store/modules/user";
 import { ResultEnum } from "@/enums/ResultEnum";
 import { getToken } from "@/utils/auth";
 import router from "@/router";
-import { ElNotification } from "element-plus";
 
 // 创建 axios 实例
 const service = axios.create({
@@ -26,9 +25,7 @@ service.interceptors.request.use(
     }
     return config;
   },
-  (error) => {
-    return Promise.reject(error);
-  }
+  (error) => Promise.reject(error)
 );
 
 // 响应拦截器
@@ -74,7 +71,7 @@ let requestsQueue: Array<() => void> = [];
 
 // 刷新 Token 处理
 async function handleTokenRefresh(config: InternalAxiosRequestConfig) {
-  return new Promise(async (resolve) => {
+  return new Promise((resolve) => {
     const requestCallback = () => {
       config.headers.Authorization = getToken();
       resolve(service(config));
@@ -99,13 +96,12 @@ async function handleTokenRefresh(config: InternalAxiosRequestConfig) {
           ElNotification({
             title: "提示",
             message: "您的会话已过期，请重新登录",
-            type: "warning",
-            duration: 2000,
+            type: "info",
           });
           useUserStoreHook()
             .clearUserData()
             .then(() => {
-              router.push({ name: "login" });
+              router.push("/login");
             });
         })
         .finally(() => {

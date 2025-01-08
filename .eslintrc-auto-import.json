@@ -311,6 +311,7 @@
     "watchWithFilter": true,
     "whenever": true,
     "useI18n": true,
-    "ElMessage": true
+    "ElMessage": true,
+    "ElNotification": true
   }
 }
