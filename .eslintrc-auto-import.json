@@ -312,6 +312,7 @@
     "whenever": true,
     "useI18n": true,
     "ElMessage": true,
-    "ElNotification": true
+    "ElNotification": true,
+    "ElMessageBox": true
   }
 }
