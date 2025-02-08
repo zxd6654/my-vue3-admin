@@ -27,8 +27,12 @@ const defaultSettings: AppSettings = {
   size: SizeEnum.DEFAULT,
   // 语言
   language: LanguageEnum.ZH_CN,
+  // 是否开启水印
+  watermarkEnabled: false,
   // 主题颜色
   themeColor: "#4080FF",
+  // 水印内容
+  watermarkContent: pkg.name,
 };
 
 export default defaultSettings;

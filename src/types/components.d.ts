@@ -18,6 +18,7 @@ declare module 'vue' {
     ElButton: typeof import('element-plus/es')['ElButton']
     ElCard: typeof import('element-plus/es')['ElCard']
     ElCheckbox: typeof import('element-plus/es')['ElCheckbox']
+    ElColorPicker: typeof import('element-plus/es')['ElColorPicker']
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
     ElDialog: typeof import('element-plus/es')['ElDialog']
     ElDivider: typeof import('element-plus/es')['ElDivider']
@@ -42,6 +43,7 @@ declare module 'vue' {
     ElTag: typeof import('element-plus/es')['ElTag']
     ElText: typeof import('element-plus/es')['ElText']
     ElTooltip: typeof import('element-plus/es')['ElTooltip']
+    ElWatermark: typeof import('element-plus/es')['ElWatermark']
     Fullscreen: typeof import('./../components/Fullscreen/index.vue')['default']
     Hamburger: typeof import('./../components/Hamburger/index.vue')['default']
     HelloWorld: typeof import('./../components/HelloWorld.vue')['default']
@@ -50,6 +52,7 @@ declare module 'vue' {
     IEpWarningFilled: typeof import('~icons/ep/warning-filled')['default']
     IEpWarnTriangleFilled: typeof import('~icons/ep/warn-triangle-filled')['default']
     LangSelect: typeof import('./../components/LangSelect/index.vue')['default']
+    LayoutSelect: typeof import('./../layout/components/Settings/components/LayoutSelect.vue')['default']
     MenuSearch: typeof import('./../components/MenuSearch/index.vue')['default']
     NavBar: typeof import('./../layout/components/NavBar/index.vue')['default']
     NavbarRight: typeof import('./../layout/components/NavBar/components/NavbarRight.vue')['default']
@@ -66,6 +69,7 @@ declare module 'vue' {
     SizeSelect: typeof import('./../components/SizeSelect/index.vue')['default']
     SvgIcon: typeof import('./../components/SvgIcon/index.vue')['default']
     TagsView: typeof import('./../layout/components/TagsView/index.vue')['default']
+    ThemeColorPicker: typeof import('./../layout/components/Settings/components/ThemeColorPicker.vue')['default']
     UserProfile: typeof import('./../layout/components/NavBar/components/UserProfile.vue')['default']
   }
 }

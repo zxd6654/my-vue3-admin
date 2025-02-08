@@ -54,6 +54,7 @@
     </ul>
   </div>
 </template>
+
 <script lang="ts" setup>
 import { type RouteRecordRaw } from "vue-router";
 import { resolve } from "path-browserify";

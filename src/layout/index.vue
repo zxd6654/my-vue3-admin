@@ -77,9 +77,9 @@ watch(
 );
 
 const classObj = computed(() => ({
-  hideSidebar: !isOpenSidebar,
-  openSidebar: isOpenSidebar,
-  mobile: isMobile,
+  hideSidebar: !isOpenSidebar.value,
+  openSidebar: isOpenSidebar.value,
+  mobile: isMobile.value,
   [`layout-${settingsStore.layout}`]: true,
 }));
 

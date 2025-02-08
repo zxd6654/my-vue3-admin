@@ -13,7 +13,12 @@ export const useSettingsStore = defineStore("setting", () => {
   const layout = useStorage<string>("layout", defaultSettings.layout);
   // 侧边栏 Logo
   const sidebarLogo = useStorage<boolean>("sidebarLogo", defaultSettings.sidebarLogo);
-  //主题
+  // 水印
+  const watermarkEnabled = useStorage<boolean>(
+    "watermarkEnabled",
+    defaultSettings.watermarkEnabled
+  );
+  // 主题
   const themeColor = useStorage<string>("themeColor", defaultSettings.themeColor);
   const theme = useStorage<string>("theme", defaultSettings.theme);
 
@@ -33,6 +38,7 @@ export const useSettingsStore = defineStore("setting", () => {
     tagsView,
     sidebarLogo,
     layout,
+    watermarkEnabled,
   };
 
   function changeSetting({ key, value }: { key: string; value: SettingsValue }) {
@@ -59,6 +65,7 @@ export const useSettingsStore = defineStore("setting", () => {
     layout,
     themeColor,
     theme,
+    watermarkEnabled,
     changeLayout,
     changeTheme,
     changeSetting,
