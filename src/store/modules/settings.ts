@@ -57,6 +57,7 @@ export const useSettingsStore = defineStore("setting", () => {
     tagsView,
     sidebarLogo,
     layout,
+    themeColor,
     theme,
     changeLayout,
     changeTheme,

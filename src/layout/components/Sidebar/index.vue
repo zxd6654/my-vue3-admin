@@ -6,19 +6,33 @@
       <SidebarMixTopMenu class="flex-1" />
       <NavbarRight />
     </div>
+
+    <!-- 顶部布局顶部 || 左侧布局左侧 -->
+    <template v-else>
+      <SidebarLogo v-if="sidebarLogo" :collapse="isSidebarCollapsed" />
+      <el-scrollbar>
+        <SidebarMenu :menu-list="permissionStore.routes" base-path="" />
+      </el-scrollbar>
+
+      <!-- 顶部布局导航 -->
+      <NavbarRight v-if="isTopLayout" />
+    </template>
   </div>
 </template>
 
 <script setup lang="ts">
 import { LayoutEnum } from "@/enums/LayoutEnum";
-import { useAppStore, useSettingsStore } from "@/store";
+import { useAppStore, usePermissionStore, useSettingsStore } from "@/store";
 
 const appStore = useAppStore();
 const settingsStore = useSettingsStore();
+const permissionStore = usePermissionStore();
 
 const sidebarLogo = computed(() => settingsStore.sidebarLogo);
+const layout = computed(() => settingsStore.layout);
 
 const isMixLayout = computed(() => settingsStore.layout === LayoutEnum.MIX);
+const isTopLayout = computed(() => layout.value === LayoutEnum.TOP);
 const isSidebarCollapsed = computed(() => !appStore.sidebar.opened);
 </script>
 

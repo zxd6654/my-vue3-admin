@@ -23,10 +23,10 @@
       <el-switch v-model="settingsStore.sidebarLogo" />
     </div>
 
-    <div class="py-1 flex-x-between">
+    <!-- <div class="py-1 flex-x-between">
       <span class="text-xs">{{ $t("settings.watermark") }}</span>
       <el-switch v-model="settingsStore.watermarkEnabled" />
-    </div>
+    </div> -->
 
     <el-divider>{{ $t("settings.navigation") }}</el-divider>
 

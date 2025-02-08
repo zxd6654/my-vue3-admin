@@ -2,7 +2,6 @@
   <component :is="linkType" v-bind="linkProps">
     <slot />
   </component>
-  >
 </template>
 
 <script setup lang="ts">

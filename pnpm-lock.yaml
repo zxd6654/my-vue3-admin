@@ -23,6 +23,9 @@ importers:
       element-plus:
         specifier: ^2.9.1
         version: 2.9.1(vue@3.5.13(typescript@5.6.3))
+      nprogress:
+        specifier: ^0.2.0
+        version: 0.2.0
       path-browserify:
         specifier: ^1.0.1
         version: 1.0.1
@@ -60,6 +63,9 @@ importers:
       '@types/node':
         specifier: ^22.10.2
         version: 22.10.2
+      '@types/nprogress':
+        specifier: ^0.2.3
+        version: 0.2.3
       '@types/path-browserify':
         specifier: ^1.0.3
         version: 1.0.3
@@ -956,6 +962,9 @@ packages:
 
   '@types/node@22.10.2':
     resolution: {integrity: sha512-Xxr6BBRCAOQixvonOye19wnzyDiUtTeqldOOmj3CkeblonbccA12PFwlufvRdrpjXxqnmUaeiU5EOA+7s5diUQ==}
+
+  '@types/nprogress@0.2.3':
+    resolution: {integrity: sha512-k7kRA033QNtC+gLc4VPlfnue58CM1iQLgn1IMAU8VPHGOj7oIHPp9UlhedEnD/Gl8evoCjwkZjlBORtZ3JByUA==}
 
   '@types/path-browserify@1.0.3':
     resolution: {integrity: sha512-ZmHivEbNCBtAfcrFeBCiTjdIc2dey0l7oCGNGpSuRTy8jP6UVND7oUowlvDujBy8r2Hoa8bfFUOCiPWfmtkfxw==}
@@ -2894,6 +2903,9 @@ packages:
     resolution: {integrity: sha512-ppwTtiJZq0O/ai0z7yfudtBpWIoxM8yE6nHi1X47eFR2EWORqfbu6CnPlNsjeN683eT0qG6H/Pyf9fCcvjnnnQ==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
+  nprogress@0.2.0:
+    resolution: {integrity: sha512-I19aIingLgR1fmhftnbWWO3dXc0hSxqHQHQb3H8m+K3TnEn/iSeTZZOyvKXWqQESMwuUVnatlCnZdLBZZt2VSA==}
+
   nth-check@2.1.1:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}
 
@@ -4598,6 +4610,8 @@ snapshots:
   '@types/node@22.10.2':
     dependencies:
       undici-types: 6.20.0
+
+  '@types/nprogress@0.2.3': {}
 
   '@types/path-browserify@1.0.3': {}
 
@@ -6835,6 +6849,8 @@ snapshots:
   npm-run-path@5.3.0:
     dependencies:
       path-key: 4.0.0
+
+  nprogress@0.2.0: {}
 
   nth-check@2.1.1:
     dependencies:

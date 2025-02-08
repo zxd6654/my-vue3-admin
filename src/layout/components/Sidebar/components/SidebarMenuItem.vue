@@ -46,16 +46,17 @@
     </el-sub-menu>
   </div>
 </template>
-<script lang="ts" setup>
-import path from "path-browserify";
-import { isExternal } from "@/utils";
 
-import type { RouteRecordRaw } from "vue-router";
-
+<script setup lang="ts">
 defineOptions({
   name: "SidebarMenuItem",
   inheritAttrs: false,
 });
+
+import path from "path-browserify";
+import type { RouteRecordRaw } from "vue-router";
+
+import { isExternal } from "@/utils";
 
 const props = defineProps({
   /**
@@ -65,6 +66,7 @@ const props = defineProps({
     type: Object as PropType<RouteRecordRaw>,
     required: true,
   },
+
   /**
    * 父级完整路径
    */
@@ -82,7 +84,7 @@ const props = defineProps({
   },
 });
 
-//可见的唯一子节点
+// 可见的唯一子节点
 const onlyOneChild = ref();
 
 /**
@@ -130,6 +132,7 @@ function resolvePath(routePath: string) {
   return path.resolve(props.basePath, routePath);
 }
 </script>
+
 <style lang="scss">
 .hideSidebar {
   .submenu-title-noDropdown {
